@@ -2,21 +2,18 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include <locale.h>
 
-    int n, i, key, x;
-	char c, msg[50];
-	
+int n, i, key, x;
+char c, msg[50];
 
 main()
 {
-	setlocale(LC_ALL, "Portuguese");
 	
 	do{
 		
 		system("cls");
 		printf("=-=-=-=-=-=-=-=-=-=-=\n");
-		printf("Criptografia de César\n");	
+		printf("Criptografia de Cesar\n");	
 		printf("=-=-=-=-=-=-=-=-=-=-=\n\n");
 		
 		printf("[1] - Criptografar um texto\n");
@@ -44,11 +41,7 @@ main()
 			
 			    for (i = 0; i < n; i++)
 			    {
-			        if(msg[i] == '\0')
-			        {
-			            printf(" ");
-			        }
-			        else if(isalpha(msg[i]) == 0)
+					if(isalpha(msg[i]) == 0)
 			        {
 			        	c = msg[i];
 			            printf("%c", c);
@@ -85,11 +78,7 @@ main()
 			
 			    for (i = 0; i < n; i++)
 			    {
-			        if(msg[i] == '\0')
-			        {
-			            printf(" ");
-			        }
-			        else if(isalpha(msg[i]) == 0)
+			        if(isalpha(msg[i]) == 0)
 			        {
 			        	c = msg[i];
 			            printf("%c", c);
@@ -107,11 +96,14 @@ main()
 			    }
 			    printf("\n\n");
 			    system("pause");
-				break;			
+				break;	
+			
+			case 0:
+				break;		
 			
 			
 			default:
-				x = 0;
+				x = 1;
 				break;			
 		}
 		
