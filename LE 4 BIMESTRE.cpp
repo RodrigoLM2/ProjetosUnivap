@@ -1,21 +1,21 @@
 #include <stdio.h>
 #include <locale.h>
 
-int diciplinas[5]
+char disciplinas[5];
 
-void nomedisc (){
+void nomedisc(){
 	
-	for(int i = 0; i < 4; i++){
+	for(int i = 0; i < 5; i++){
 		
-		printf("Digite o nome da %dº disciplina: ", i);
-		scanf("%c", &disciplinas[i]);
+		printf("Digite o nome da %dº disciplina: ", i+1);
+		scanf("%s", &disciplinas[i]);
 	}
 }
 
 main(){
 	
-	setlocale(LC_ALL, "Portuguese");	
+	setlocale(LC_ALL, "Portuguese");
+		
 	nomedisc();
-	
-	
+
 }
